@@ -1,46 +1,52 @@
 <html>
+ 
     <head>
-        <title>
-            console
-            
-        </title>
+<title>My Family</title>
     </head>
-    <body>
-        <h1>open console</h1>
-        <p>
-            visual studio is a great HTML coding platform 
-            and console screen is the part from which we can check that do our code is correct or not.
-        </p>
-        <p>
-            this is a program of JS and its arithmatic operations.
-        </p>
-        <script>
-            console.log("this is vrtti kumra");
-            var first="vritti";
-            console.log(first);
-            var last = "kumra";
-            console.log(last);
-            var fullname=first.concat(last);
-            console.log(fullname);
-           var a=5;
-           var b=7;
-           var c= a + b;
-           console.log(c);
-           var p= a * b;
-           console.log(p);
-           var d= a - b;
-           console.log(d);
-           var m= a / b;
-           console.log(m);
-        var square_root=Math.sqrt(25);
-            console.log(square_root);
-            var max1=Math.max(10,48,7)
-            console.log(max1);
-            var min1=Math.min(10,48,7)
-            console.log(min1);
-            var power1=Math.pow(5,3);
-            console.log(power1);
-                              
-        </script>
-        </body>
-        </html>
+    <body align="center">
+      
+        <h1>My Family Book</h1>
+      
+      <div id="member_1">
+         <img src="family.jpg" id="fam1" height="550" width ="250"/><br/><br/><br/>
+      </div>
+      
+     <div id="member_2" style="display:none">
+       <h2>VIKASKUMRA</h2> 
+       <img src="dad.jpg" id="fam1" height="500" width ="250"/><br/><br/><br/>
+     </div>
+
+     <div id="member_3" style="display:none">
+        <h2>VINNYKUMRA</h2> 
+        <img src="mom.jpg" id="fam1" height="500" width ="250"/><br/><br/><br/>
+      </div>
+
+      <div id="member_4" style="display:none">
+        <h2>VRITTIKUMRA</h2> 
+        <img src="me.jpg" id="fam1" height="500" width ="250"/><br/><br/><br/>
+      </div>
+
+      <div id="member_5" style="display:none">
+        <h2>MANNATKUMRA</h2> 
+        <img src="mannat.jpg" id="fam1" height="500" width ="250"/><br/><br/><br/>
+      </div>
+
+
+       <button type="button" id="b1" onclick="nextmember()"> NEXT </button>
+
+       <script>
+          var current_member=1;
+           function nextmember()
+           {
+             
+              document.getElementById('member_'+current_member).style.display='none';
+              if(current_member>=5)
+              {
+                current_member=0;
+              }
+               current_member++;
+               document.getElementById('member_'+current_member).style.display='block';
+           }
+       </script>
+    </body> 
+</html>
